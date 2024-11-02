@@ -288,6 +288,47 @@ temp_credentials = response['Credentials']
 - Under Cloud apps, select the applications that should require MFA.
 - Under Access controls, select Grant access, then check the box for Require multi-factor authentication.
 - Enable the policy and save your changes
+## Single Sign-On (SSO) and Federated Identity Management (FIM)
+### Single Sign-On (SSO)
+SSO is an authentication process that allows users to access multiple applications with one set of login credentials. This means that after logging in once, users can navigate to different applications without needing to re-enter their credentials. 
+### How It Works:
+- User Authentication: The user logs in to an SSO service using their credentials.
+- Token Generation: Upon successful authentication, the SSO service generates a token that is used to verify the user's identity across connected applications.
+- Access Granted: When the user attempts to access another application, the application checks for the token. If valid, access is granted without requiring further login.
+### Example: 
+An employee logs into their company email system and is automatically logged into other applications like calendar, payroll, and project management tools without needing to enter their password again.
+### Characteristics of SSO
+- User Convenience: Reduces password fatigue by minimizing the number of logins required.
+- Centralized Authentication: All authentication is managed through a single platform.
+- Improved Security: Reduces the risk of password-related security breaches by lowering the number of passwords users need to remember6
+### Technologies Used in SSO
+- SAML (Security Assertion Markup Language): A protocol that allows secure exchange of authentication and authorization data between parties.
+- OAuth: A protocol for token-based authorization that allows third-party services to exchange information without sharing passwords.
+- OpenID Connect (OIDC): An identity layer on top of OAuth 2.0 that provides user authentication.
+### Federated Identity Management (FIM)
+FIM extends the concept of SSO beyond a single organization, allowing users to authenticate across multiple domains or organizations using one identity. This is particularly useful in environments where organizations collaborate or share resources.
+###How It Works:
+- Identity Provider (IdP): A trusted entity that manages user identities and provides authentication services.
+- Service Provider (SP): The application or service that users want to access.
+- Trust Relationships: Organizations establish trust relationships with IdPs so that users can authenticate using their IdP credentials when accessing SPs.
+When a user attempts to access an application from an SP, the SP redirects them to the IdP for authentication. Upon successful verification, the IdP sends an assertion back to the SP, allowing access without further login
+### Example: 
+A user can log into third-party applications like Spotify or LinkedIn using their Google account credentials. This means they don’t need to create separate accounts for each service, streamlining their experience across platforms
+### Characteristics of FIM
+- Cross-Domain Access: Enables users to access resources across different organizations or domains with a single identity.
+- Trust-Based Model: Relies on established trust between IdPs and SPs for secure identity verification.
+- Enhanced User Experience: Simplifies user interactions with multiple services by reducing credential management overhead4
+### Technologies Used in FIM
+- SAML: Commonly used for exchanging authentication data between IdPs and SPs.
+- OAuth and OIDC: Often utilized for authorizing third-party applications while maintaining user privacy and security
+### Key Differences Between SSO and FIM
+|Feature	|Single Sign-On (SSO)	|Federated Identity Management (FIM)|
+| ----------- | ----------- | ----------- |
+|Scope	|Within a single organization	|Across multiple organizations|
+|Authentication Responsibility	|Managed by a centralized service	|Managed by multiple IdPs with trust relationships|
+|User Experience|	Seamless access within one domain	|Seamless access across different domains|
+|Protocols	|Primarily uses SAML, OAuth	|Uses SAML, OAuth, OIDC for cross-domain access|
+
 ## References:
 
 [IAM user groups](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html)
