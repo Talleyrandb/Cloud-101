@@ -42,6 +42,34 @@ In Microsoft Entra ID (formerly kowns as Azure Active Directory), the concepts o
 |user groups|An user group is an identity that specifies a collection of cloud users. |
 |roles|An cloud role is an identity within your cloud account that has specific permissions. It's similar to an cloud user, but isn't associated with a specific person|
 
+# AWS IAM Roles
+AWS Identity and Access Management (IAM) roles are a way to grant permissions to entities you trust. An IAM role is similar to a user, but it is not associated with a specific person or entity. Instead, it can be assumed by anyone who needs it, including AWS services, applications, or users.
+
+### Example of an IAM Role
+*  Role Creation: You create a role named S3ReadOnlyRole.
+*  Trust Policy: This role can be assumed by an EC2 instance.
+*  Permissions Policy: The role allows read access to all objects in a specific S3 bucket.
+When an EC2 instance assumes S3ReadOnlyRole, it can access the S3 bucket without needing to embed AWS credentials in the application running on that instance.
+
+## Azure Role-Based Access Control (RBAC)
+Azure RBAC is an authorization system that provides fine-grained access management to Azure resources. It allows you to manage who has access to Azure resources and what they can do with those resources.
+
+Example of Azure RBAC
+
+*  Role Definition: You create a custom role called VMOperator, which allows starting and stopping virtual machines but not deleting them.
+*  Security Principal: A user named Alice is part of the DevOps group.
+*  Role Assignment: You assign the ```VMOperator``` role to Alice at the resource group level containing several virtual machines.
+
+## Comparison of AWS IAM Roles and Azure RBAC
+|Feature	|AWS IAM Roles	|Azure RBAC|
+| ----------- | ----------- | ----------- |
+|Purpose	|Grant permissions to entities on AWS	|Manage access to Azure resources|
+|Key Components|	Trust Policy, Permissions Policy	|Security Principal, Role Definition, Role Assignment|
+|Assumable By|	Users, services, applications	|Users, groups, service principals|
+|Scope of Access	|Limited to AWS resources	|Can be assigned at multiple levels (subscription, resource group)|
+|Flexibility|	Roles can be assumed dynamically	|Roles are assigned statically based on definitions|
+
+
 ## References:
 
 [IAM user groups](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html)
