@@ -114,8 +114,8 @@ Before configuring your Lambda function, ensure you have a VPC set up with the n
 2. Security Groups: Define security groups that allow inbound and outbound traffic as needed.
 
 3. Set Up IAM Permissions
-Your Lambda function needs permissions to create and manage the Elastic Network Interfaces (ENIs) that allow it to connect to the VPC. You can achieve this by attaching the AWSLambdaVPCAccessExecutionRole policy to your function's execution role.
-Example IAM Policy
+Your Lambda function needs permissions to create and manage the Elastic Network Interfaces (ENIs) that allow it to connect to the VPC. You can achieve this by attaching the ```AWSLambdaVPCAccessExecutionRole``` policy to your function's execution role.
+### Example IAM Policy
 
 ```json
 {
@@ -140,12 +140,12 @@ Example IAM Policy
 You can attach your Lambda function to a VPC using the AWS Management Console or AWS CLI.
 Using the AWS Console:
 
- 	> Go to the Lambda Management Console.
- 	> Select your function.
- 	> Navigate to the Configuration tab.
- 	> Under VPC, click Edit.
- 	> Choose your VPC, then select the appropriate subnets and security groups.
- 	> Save your changes.
+*  Go to the Lambda Management Console.
+*  Select your function.
+*  Navigate to the Configuration tab.
+*  Under VPC, click Edit.
+*  Choose your VPC, then select the appropriate subnets and security groups.
+*  Save your changes.
 
 Using AWS CLI:
 
