@@ -68,6 +68,127 @@ Example of Azure RBAC
 |Assumable By|	Users, services, applications	|Users, groups, service principals|
 |Scope of Access	|Limited to AWS resources	|Can be assigned at multiple levels (subscription, resource group)|
 |Flexibility|	Roles can be assumed dynamically	|Roles are assigned statically based on definitions|
+## Functions 
+## AWS functions 
+AWS Lambda enables you to run code without provisioning or managing servers. It automatically scales your applications by running code in response to events, such as changes in data or system state. You only pay for the compute time you consume, making it a cost-effective solution for many applications.
+
+### Examples
+
+*  File Processing:
+        When a file is uploaded to an S3 bucket, it triggers a Lambda function that processes the file (e.g., generating thumbnails for images).
+        Example: A user uploads an image to S3, which invokes a Lambda function to create a thumbnail and store it back in S3.
+*  Real-Time Data Processing:
+        AWS Lambda can process streaming data from Amazon Kinesis. For instance, you can set up a Kinesis stream that captures website click data and use a *  Lambda function to analyze this data in real-time.
+        Example: A Lambda function polls Kinesis every few seconds to process new records as they arrive
+*  Webhook Processing:
+        Lambda can be used to handle incoming webhooks. For example, when a payment is processed through an online service, the webhook triggers a Lambda function that updates your database accordingly
+
+## Azure Functions is Microsoft's serverless computing service that allows you to execute code in response to events. 
+
+### Examples
+
+*  HTTP Trigger:
+        An Azure Function can be set up to respond to HTTP requests. For example, you could create an API endpoint that processes user registration data.
+        Example: A user submits a registration form on your website; this triggers an Azure Function that saves the user's details to a database.
+*  Timer Trigger:
+        You can schedule Azure Functions to run at specific intervals. For instance, you might want a function that cleans up old records from your database every night at midnight.
+        Example: A timer-triggered function runs nightly to delete records older than 30 days from an SQL database.
+*  Blob Storage Trigger:
+       Azure Functions can respond to new blobs being added to Azure Blob Storage.
+        Example: When a new video file is uploaded, an Azure Function could automatically transcode it into different formats for streaming.
+### Comparison Table
+|Feature	|AWS Lambda	|Azure Functions|
+| ----------- | ----------- | ----------- |
+|Event Triggers|	S3, DynamoDB, API Gateway	|Blob Storage, HTTP requests, Timer|
+|Pricing Model	|Pay-per-use	|Pay-per-execution|
+|Language Support	|Node.js, Python, Java, C#, Ruby	|C#, JavaScript, Python, Java|
+|Scaling	|Automatic scaling	|Automatic scaling|
+|Development Tools	|AWS SDKs	|Azure SDKs and CLI|
+
+## Lambda and VPC Integration
+AWS Lambda functions can access resources such as Amazon RDS databases, Amazon ElastiCache clusters, and other services that are only reachable within a specific VPC. When you attach a Lambda function to a VPC, it operates within the network boundaries of that VPC, allowing for secure communications with those resources.
+### Steps to Configure Lambda Functions for VPC Access
+1. Create or Identify Your VPC
+Before configuring your Lambda function, ensure you have a VPC set up with the necessary subnets and security groups:
+
+*  Subnets: Choose private subnets where your resources (like RDS or ElastiCache) are located.
+*  Security Groups: Define security groups that allow inbound and outbound traffic as needed.
+
+2. Set Up IAM Permissions
+Your Lambda function needs permissions to create and manage the Elastic Network Interfaces (ENIs) that allow it to connect to the VPC. You can achieve this by attaching the AWSLambdaVPCAccessExecutionRole policy to your function's execution role.
+Example IAM Policy
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeVpcs",
+        "ec2:CreateNetworkInterface",
+        "ec2:AttachNetworkInterface",
+        "ec2:DeleteNetworkInterface"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+```
+3. Attach Your Lambda Function to the VPC
+You can attach your Lambda function to a VPC using the AWS Management Console or AWS CLI.
+Using the AWS Console:
+
+ 	> Go to the Lambda Management Console.
+ 	> Select your function.
+ 	> Navigate to the Configuration tab.
+ 	> Under VPC, click Edit.
+ 	> Choose your VPC, then select the appropriate subnets and security groups.
+ 	> Save your changes.
+
+Using AWS CLI:
+
+```bash
+aws lambda update-function-configuration \
+  --function-name YourFunctionName \
+  --vpc-config SubnetIds=subnet-12345678,SecurityGroupIds=sg-12345678
+```
+4. Internet Access Considerations
+By default, when a Lambda function is attached to a VPC, it loses direct internet access. If your function needs internet access (for example, to call external APIs), you must set up a NAT Gateway or NAT Instance in your VPC:
+
+*  NAT Gateway: A managed service that allows instances in a private subnet to connect to the internet while preventing unsolicited inbound traffic from the internet.
+
+### Example NAT Gateway Setup:
+
+ 	> Create a NAT Gateway in a public subnet.
+ 	> Update the route table associated with your private subnet to route internet-bound traffic through the NAT Gateway.
+
+5. Testing and Validation
+Once configured, test your Lambda function to ensure it can access resources within the VPC:
+
+ 	> Use logging (e.g., Amazon CloudWatch Logs) to monitor function execution and troubleshoot any access issues.
+ 	> Verify that security group rules allow traffic from the Lambda function's ENIs to the target resources.
+## Azure Function and Azure Virtual Network Integration
+
+Virtual Network Integration enables your Azure Function App to reach resources within a VNet. This integration is primarily for outbound connections, meaning your function can call services inside the VNet but cannot receive inbound traffic from it directly.
+Steps to Enable Virtual Network Integration
+
+1. Create or Identify a VNet: Ensure you have a VNet set up in your Azure subscription.
+2. Configure the Function App:
+ 	> Go to your Function App in the Azure portal.
+ 	> Select Networking from the left menu.
+ 	> Under VNet Integration, click on Click here to configure.
+ 	> Choose Add VNet, and select the desired VNet from the dropdown list (it must be in the same region) 
+3. Select Subnet: You need to select an empty subnet within the VNet for integration. If you don’t have one, you can create a new subnet during this step.
+4. Route All Traffic (Optional): By default, all outbound traffic from your function app is routed through the VNet. You can verify this setting in the networking configuration.
+
+### Example Scenario
+Imagine you have a function app that needs to access an Azure SQL Database secured within a VNet:
+ 	> Create a VNet named myVNet with a subnet called functionsSubnet.
+ 	> Integrate your function app with myVNet by following the steps above.
+ 	> Ensure that your SQL Database has firewall rules allowing access from functionsSubnet.
 
 
 ## References:
@@ -81,7 +202,7 @@ Example of Azure RBAC
 [Role on Azure](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview?wt.mc_id=DT-MVP-5004771)
 [Azure built-in roles](https://learn.microsoft.com/en-gb/azure/role-based-access-control/role-assignments-list-portal)
 [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
-[title](
+[Access Resources in a VPC from Your Lambda Functions](https://aws.amazon.com/ru/blogs/aws/new-access-resources-in-a-vpc-from-your-lambda-functions/)
 [title](
 [title](
 [title](
@@ -89,4 +210,4 @@ Example of Azure RBAC
 [title](
 [title](
   
-https://learn.microsoft.com/en-us/azure/role-based-access-control/overview?wt.mc_id=DT-MVP-5004771
+
