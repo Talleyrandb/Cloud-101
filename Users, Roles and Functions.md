@@ -10,21 +10,21 @@
 *  When a user is added to a group, they automatically inherit the group's permissions. This means if you need to grant similar permissions to several users, you can simply add them to the appropriate group instead of assigning permissions individually.
 ### Example Scenario in AWS:
 *  Creating a Group: Suppose you have a team of developers. You create a group called Developers and attach a policy that allows them to deploy applications.
-    Adding Users: You add users like Alice and Bob to the Developers group. Both Alice and Bob now have permissions defined by the group's policy.
-    Managing Permissions: If Charlie joins the team, you can simply add him to the Developers group without needing to configure individual permissions for him 
+*  Adding Users: You add users like Alice and Bob to the Developers group. Both Alice and Bob now have permissions defined by the group's policy.
+*  Managing Permissions: If Charlie joins the team, you can simply add him to the Developers group without needing to configure individual permissions for him 
 # Microsoft Entra ID: Users and Groups
 In Microsoft Entra ID (formerly kowns as Azure Active Directory), the concepts of users and groups are similar but tailored for Microsoft's ecosystem. Entra ID Users:
-## An Entra ID user
+## Entra ID user
 *  Rrepresents an individual account that can authenticate against Azure services. Each user has attributes such as email addresses, roles, and assigned licenses.
-    Users can be assigned direct roles or permissions that dictate what resources they can access within Azure.
+*  Users can be assigned direct roles or permissions that dictate what resources they can access within Azure.
 ## Entra ID Groups:
 *  An Entra ID group is a logical collection of users that simplifies permission management. For example, you might create a group called Finance Team, granting all members access to financial applications.
-    Groups can be used for role-based access control (RBAC), allowing you to assign roles at the group level rather than individually.
+*  Groups can be used for role-based access control (RBAC), allowing you to assign roles at the group level rather than individually.
 ### Example Scenario in Microsoft Entra ID:
 
 *  Creating a Group: You create a group named HR Team, which includes all human resources personnel.
-    Assigning Roles: You assign the group a role that allows access to employee records.
-    Adding Users: When new HR staff join, you simply add them to the HR Team group, granting them immediate access without additional configuration.
+*  Assigning Roles: You assign the group a role that allows access to employee records.
+*  Adding Users: When new HR staff join, you simply add them to the HR Team group, granting them immediate access without additional configuration.
 ## Key Differences
 
 |Feature|	AWS IAM	|Microsoft Entra ID|
@@ -32,3 +32,21 @@ In Microsoft Entra ID (formerly kowns as Azure Active Directory), the concepts o
 |User Credential	|Long-term credentials (passwords, keys)	|Account credentials with roles|
 |Group Management	|Permissions managed via policies	|Role-based access control (RBAC)|
 |User Types| Individual IAM users|	Individual accounts with attributes|
+
+## Types of users 
+
+|type    | Description|
+| ----------- | ----------- | 
+|root user| When you first create an cloud account, you begin with one sign-in identity that has complete access to all cloud services and resources in the account. |
+|users    | An user is an identity within your cloud account that has specific permissions for a single person or application.  |
+|user groups|An user group is an identity that specifies a collection of cloud users. |
+|roles|An cloud role is an identity within your cloud account that has specific permissions. It's similar to an cloud user, but isn't associated with a specific person|
+
+## References:
+
+[IAM user groups](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html)
+[Create IAM user groups](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_create.html)
+[Create Azure User](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-create-delete-users?toc=%2Fentra%2Fidentity%2Fusers%2Ftoc.json&bc=%2Fentra%2Fidentity%2Fusers%2Fbreadcrumb%2Ftoc.json)
+[Create a Azure group](https://learn.microsoft.com/en-us/entra/identity/users/groups-create-rule)
+[identification guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html)
+[Entra ID](https://learn.microsoft.com/en-us/entra/)
