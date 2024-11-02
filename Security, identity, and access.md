@@ -271,7 +271,7 @@ temp_credentials = response['Credentials']
 - Enable MFA
 - Configure MFA Settings
 - Create policies that require MFA based on specific conditions like user location, device compliance, or risk levels
-### example assume role in Azure 
+### Example assume role in Azure 
 1. Enabling MFA
 - set Security Defaults
 - set Conditional Access Policies
