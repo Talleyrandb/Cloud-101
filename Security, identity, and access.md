@@ -203,7 +203,7 @@ Imagine you have a function app that needs to access an Azure SQL Database secur
 [Azure built-in roles](https://learn.microsoft.com/en-gb/azure/role-based-access-control/role-assignments-list-portal)
 [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
 [Access Resources in a VPC from Your Lambda Functions](https://aws.amazon.com/ru/blogs/aws/new-access-resources-in-a-vpc-from-your-lambda-functions/)
-[title](
+[networking in Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-networking-faq)
 [title](
 [title](
 [title](
