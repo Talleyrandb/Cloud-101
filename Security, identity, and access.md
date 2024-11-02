@@ -78,3 +78,15 @@ Example of Azure RBAC
 [Create a Azure group](https://learn.microsoft.com/en-us/entra/identity/users/groups-create-rule)
 [identification guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html)
 [Entra ID](https://learn.microsoft.com/en-us/entra/)
+[Role on Azure](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview?wt.mc_id=DT-MVP-5004771)
+[Azure built-in roles](https://learn.microsoft.com/en-gb/azure/role-based-access-control/role-assignments-list-portal)
+[IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
+[title](
+[title](
+[title](
+[title](
+[title](
+[title](
+[title](
+  
+https://learn.microsoft.com/en-us/azure/role-based-access-control/overview?wt.mc_id=DT-MVP-5004771
