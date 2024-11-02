@@ -189,7 +189,28 @@ Imagine you have a function app that needs to access an Azure SQL Database secur
  	> Create a VNet named myVNet with a subnet called functionsSubnet.
  	> Integrate your function app with myVNet by following the steps above.
  	> Ensure that your SQL Database has firewall rules allowing access from functionsSubnet.
+# Access Control
+Access control is a security technique that regulates who or what can view or use resources in a computing environment. It ensures that only authorized users can access certain data or perform specific actions. Example: In a corporate environment, access control might restrict access to sensitive financial records to only those employees in the finance department.
+# Authentication
+Authentication is the process of verifying the identity of a user or system. It ensures that the entity requesting access is who they claim to be. Example: When logging into an online banking account, a user must enter their username and password. This process verifies their identity before granting access.
+# Authorization
+Authorization determines what an authenticated user is allowed to do. It specifies permissions and roles assigned to users after their identity has been verified. Example: After logging into a corporate system, an employee might have permission to view reports but not to delete them. This distinction is made through authorization policies.
+# Identity Validation
+Identity validation refers to the process of confirming that an individual's identity is legitimate and corresponds with the information provided during authentication. Example: A bank may require additional verification (such as answering security questions) if a user logs in from an unfamiliar device or location, validating their identity further.
+## Tools for Managing Access Control
+### AWS Tools
 
+1. AWS Identity and Access Management (IAM): This is the primary service for managing user identities and permissions in AWS. IAM allows you to create users, define permissions using policies, and manage roles for accessing AWS resources securely. It supports multi-factor authentication (MFA) for enhanced security.
+2. AWS IAM Identity Center: (formerly kowns as AWS SSO) enables users to access multiple accounts and applications with a single set of credentials, streamlining user management.
+3.  Amazon Cognito: This service provides authentication for web and mobile applications, allowing users to sign in with social identity providers like Google or Facebook, as well as manage user pools.
+4. AWS CloudTrail: This service records API calls made in your AWS account, providing detailed logs for auditing and compliance purposes.
+5. AWS Secrets Manager: It helps manage sensitive information such as database credentials and API keys securely, automating the rotation of secrets. 
+### Azure Tools
+
+1. Microsoft Entra ID: (formerly kowns as Azure Active Directory)is Microsoft's cloud-based identity and access management service that allows you to manage users and groups, assign permissions, and implement conditional access policies
+2. Azure Role-Based Access Control (RBAC): RBAC enables you to assign roles to users at different scopes (subscription, resource group, or resource level), controlling what actions they can perform on Azure resources.
+3. Azure Policy: This service helps enforce organizational standards and assess compliance at scale by defining policies that govern resource properties.
+4. Azure Security Center: It provides unified security management across hybrid cloud environments, offering advanced threat protection and compliance management tools.
 
 ## References:
 
