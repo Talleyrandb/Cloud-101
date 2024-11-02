@@ -31,4 +31,4 @@ In Microsoft Entra ID (formerly kowns as Azure Active Directory), the concepts o
 | ----------- | ----------- | ----------- |
 |User Credential	|Long-term credentials (passwords, keys)	|Account credentials with roles|
 |Group Management	|Permissions managed via policies	|Role-based access control (RBAC)|
-|User Type|s	Individual IAM users|	Individual accounts with attributes|
+|User Types| Individual IAM users|	Individual accounts with attributes|
