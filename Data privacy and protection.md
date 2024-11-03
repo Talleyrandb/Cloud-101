@@ -10,12 +10,12 @@ Scope of Protection: PCI DSS applies to all entities involved in payment card pr
 - Security codes (CVV)
 ## Compliance Requirements: 
 Organizations must adhere to 12 core requirements that are grouped into six goals:
-- Build and maintain a secure network and systems: This includes installing firewalls and not using vendor-supplied default passwords.
-- Protect cardholder data: Organizations must encrypt stored data and protect it during transmission.
-- Maintain a vulnerability management program: Regular updates and security patches are necessary.
-- Implement strong access control measures: Access to cardholder data should be restricted based on business needs.
-- Regularly monitor and test networks: This involves tracking all access to network resources and conducting regular security testing.
-- Maintain an information security policy: Organizations should have a comprehensive policy that addresses security measures.
+- 1. Build and maintain a secure network and systems: This includes installing firewalls and not using vendor-supplied default passwords.
+- 2. Protect cardholder data: Organizations must encrypt stored data and protect it during transmission.
+- 3. Maintain a vulnerability management program: Regular updates and security patches are necessary.
+- 4. Implement strong access control measures: Access to cardholder data should be restricted based on business needs.
+- 5. Regularly monitor and test networks: This involves tracking all access to network resources and conducting regular security testing.
+- 6. Maintain an information security policy: Organizations should have a comprehensive policy that addresses security measures.
 ##Technologies Used in PCI Compliance
 To achieve compliance with PCI DSS, organizations utilize various technologies and practices:
 - Firewalls: Essential for creating a barrier between secure internal networks and untrusted external networks.
@@ -55,6 +55,7 @@ Sensitive Authentication Data:
 [title]( )
 
 https://www.strikegraph.com/blog/pci-dss-policy
+https://sprinto.com/blog/pci-dss-controls/
 
 
 
