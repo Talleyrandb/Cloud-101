@@ -57,6 +57,7 @@ Sensitive Authentication Data:
 https://www.strikegraph.com/blog/pci-dss-policy
 https://sprinto.com/blog/pci-dss-controls/
 https://pcicompliancehub.com/the-12-requirements-of-pci-dss-v4-0-explained/
+**https://docs-prv.pcisecuritystandards.org/Guidance%20Document/PCI%20DSS%20General/PCI-DSS-Scoping-and-Segmentation-Guidance-for-Modern-Network-Architectures.pdf**
 
 
 
