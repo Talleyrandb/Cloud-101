@@ -346,16 +346,6 @@ A user can log into third-party applications like Spotify or LinkedIn using thei
 [GetSessionToken with MFA](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_sample-code.html)
 [Multi-factor authentication in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html?icmpid=docs_iam_console)
 [Implementing MFA In Azure](https://www.geeksforgeeks.org/implementing-multi-factor-authentication-mfa-in-azure-ad/)
-[title](
-[title](
-[title](
-[title](
-[title](
-[title](
-[title](
-[title](
-[title](
-[title](
-[title](
+
   
 
