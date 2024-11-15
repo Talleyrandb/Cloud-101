@@ -38,7 +38,8 @@ Builds upon the capabilities of an IDS by not only detecting but also actively p
 |Response	|Passive (alert only)	|Active (blocks threats)|
 |False Positive Impact	|Alerts require investigation	|Can disrupt legitimate traffic|
 
-![alt text](https://www.okta.com/sites/default/files/styles/1640w_scaled/public/media/image/2021-03/IDSvsIPS.png?itok=MaW56-a9)
+![imagen](https://github.com/user-attachments/assets/98390324-544d-46e1-b27b-4f0aaa37e83e)
+
 
 
 
