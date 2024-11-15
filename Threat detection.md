@@ -74,3 +74,7 @@ https://www.techtarget.com/searchsecurity/definition/threat-detection-and-respon
 https://www.forenova.com/threat-detection/guide-to-cybersecurity-threat-detection-and-response
 https://www.rapid7.com/fundamentals/threat-detection/
 https://www.sans.org/blog/what-is-threat-detection/
+https://www.techtarget.com/searchaws/definition/Amazon-GuardDuty
+https://aws.amazon.com/guardduty/?trk=cndc-detail
+https://aws.github.io/aws-security-services-best-practices/guides/guardduty/
+
