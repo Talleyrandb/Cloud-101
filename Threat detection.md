@@ -29,6 +29,12 @@ Builds upon the capabilities of an IDS by not only detecting but also actively p
 *  When a potential threat is detected, the IPS can take immediate action by blocking the offending traffic or terminating connections.
 *  It may also modify firewall rules dynamically to prevent future occurrences of similar attacks.
 3.	Alerting and Logging: Like IDSs, IPSs generate alerts for detected threats and maintain logs for analysis.
+## Comparison Between IDS and IPS
+|Feature	|Intrusion Detection System (IDS)	|Intrusion Prevention System (IPS)|
+|Primary Function	|Monitors and alerts	|Monitors, alerts, and blocks|
+|Placement	|Can be placed outside or inside	|Typically placed inline|
+|Response	|Passive (alert only)	|Active (blocks threats)|
+|False Positive Impact	|Alerts require investigation	|Can disrupt legitimate traffic|
 
 
 
