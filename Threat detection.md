@@ -40,7 +40,29 @@ Builds upon the capabilities of an IDS by not only detecting but also actively p
 
 ![imagen](https://github.com/user-attachments/assets/98390324-544d-46e1-b27b-4f0aaa37e83e)
 
+## Amazon GuardDuty 
+Is an INTELLIGENT THREAT DETECTION SERVICE designed to continuously monitor AWS accounts, workloads, and data for malicious activity. It leverages advanced technologies such as MACHINE LEARNING (ML), ANOMALY DETECTION, and integrated threat intelligence to identify potential security threats in real-time.
+Key Features
 
+*  Continuous Monitoring: GuardDuty operates without the need for additional security software, providing continuous analysis of AWS CloudTrail logs, Amazon VPC Flow Logs, and DNS query logs. This ensures that any malicious activity is detected as it occurs.
+*  Automated Threat Detection: The service uses built-in threat intelligence and machine learning models to analyze billions of events daily. It can detect a wide range of threats, including ATTACKER RECONNAISSANCE, COMPROMISED RESOURCES, and COMPROMISED ACCOUNTS.
+*  Detailed Security Findings: When a potential threat is identified, GuardDuty generates detailed security findings that provide insights into the nature of the threat and recommended actions for remediation.
+*  Scalability: As a fully managed service, GuardDuty automatically scales its detection capabilities based on the activity levels in your AWS environment. This means that users only pay for the events analyzed, making it a cost-effective solution.
+
+### How It Works
+Amazon GuardDuty functions by continuously analyzing various data sources:
+
+*  AWS CloudTrail Logs: These logs capture API calls made in your AWS account, allowing GuardDuty to identify unusual patterns indicative of malicious activity.
+*  VPC Flow Logs: By examining network traffic flow logs, GuardDuty can detect anomalous behavior such as unexpected data transfers or connections from suspicious IP addresses.
+*  DNS Logs: GuardDuty analyzes DNS query logs to identify potentially harmful domain requests that could signify malware or command-and-control communications.
+
+The service categorizes threats into three primary types:
+
+*  Attacker Reconnaissance: Includes failed login attempts and unusual API requests.
+*  Compromised Resources: Detects activities such as cryptojacking or unauthorized access to EC2 instances.
+*  Compromised Accounts: Identifies suspicious API calls from unusual locations or attempts to disable logging services.
+
+GuardDuty provides administrators with findings in a structured format that can be integrated with existing security workflows. For example, findings can trigger alerts in systems like Amazon CloudWatch or initiate automated responses via AWS Lambda functions.
 
 
 
