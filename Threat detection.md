@@ -9,6 +9,26 @@ Threat Detection involves the continuous monitoring of an organization’s IT en
 *  Incident Response Integration: Effective threat detection is coupled with a robust incident response strategy that enables organizations to react swiftly to identified threats, minimizing potential damage.
 ## Challenges in Threat Detection
 Despite advancements in technology, organizations face challenges in threat detection due to the evolving nature of cyber threats. Attackers continuously adapt their methods, making it essential for organizations to stay vigilant and update their detection strategies regularly. Additionally, the complexity of IT environments can lead to false positives or missed detections if not managed properly.
+## Intrusion Detection System (IDS) 
+Is a security mechanism that monitors network traffic and system activities for signs of malicious behavior or policy violations. The primary goal of an IDS is to identify potential threats and alert security personnel so that they can take appropriate action. IDS can be categorized into two main types based on their monitoring location: Network Intrusion Detection Systems (NIDS), which monitor traffic across the entire network and Host Intrusion Detection Systems (HIDS), which focus on individual devices or hosts.
+### How IDS Works
+1.	Traffic Monitoring: An IDS continuously analyzes incoming and outgoing network traffic or host activity to detect patterns that may indicate malicious actions. 
+2.	Detection Methods: 
+*  Signature-Based Detection: This method compares network traffic against a database of known attack signatures. If a match is found, an alert is generated.
+*  Anomaly-Based Detection: This technique establishes a baseline of normal network behavior and flags any deviations from this baseline as potential threats.
+*  Reputation-Based Detection: This approach assesses the reputation of external IP addresses and domains, blocking those associated with known malicious activities.
+3.	Alert Generation: Upon detecting suspicious activity, the IDS generates alerts that are sent to security personnel for further investigation. 
+4.	Logging: IDS systems maintain logs of detected incidents, which can be useful for post-incident analysis and compliance with regulatory standards. 
+### Limitations of IDS
+While IDSs are effective at detecting intrusions, they do not actively block threats. Instead, they serve as a monitoring tool that alerts security teams to investigate further. This can lead to delays in response times if immediate action is required. 
+## Intrusion Prevention System (IPS)
+Builds upon the capabilities of an IDS by not only detecting but also actively preventing intrusions. IPS systems are typically placed inline within the network architecture, meaning all traffic must pass through them before reaching its destination. 
+### How IPS Works
+1.	Traffic Inspection: Like an IDS, an IPS inspects network traffic for suspicious patterns or known attack signatures. 
+2.	Active Response: 
+*  When a potential threat is detected, the IPS can take immediate action by blocking the offending traffic or terminating connections.
+*  It may also modify firewall rules dynamically to prevent future occurrences of similar attacks.
+3.	Alerting and Logging: Like IDSs, IPSs generate alerts for detected threats and maintain logs for analysis.
 
 
 
