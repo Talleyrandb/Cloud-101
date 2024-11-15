@@ -1,4 +1,72 @@
+# Data protection 
 
+## What is Data protection 
+
+It refers to the set of laws, regulations, and practices designed to safeguard personal information collected, stored, and processed by organizations. This concept is fundamentally rooted in the recognition of individuals' rights regarding their personal data, which includes the ability to know what information is held about them, the right to update or correct inaccuracies, and the right to control how their data is used.
+It is crucial to distinguish between various categories of information based on their sensitivity and intended use.
+
+## Public Information 
+Refers to data that is freely available to the general public. This information can be accessed without any restrictions and is typically disseminated through official channels such as government publications, websites, or press releases. Examples include:
+
+*  Government reports
+*  Public records (e.g., birth and death certificates)
+*  Academic research that has been published openly
+
+The key characteristic of Public Information is that it does not require special permissions for access, and its disclosure does not pose any risk to individuals or organizations.
+
+## Internal use only
+is information that is intended for internal use within an organization. This type of information is not meant to be shared with the public and typically includes operational data, internal policies, and employee communications. Examples include:
+
+*  Internal memos
+*  Strategic plans
+*  Financial reports that are not publicly disclosed
+
+The primary purpose of Internal use Only is to facilitate the smooth functioning of the organization while maintaining confidentiality among employees.
+
+## Confidential 
+Encompasses sensitive information that is protected from unauthorized access and disclosure. This type of information can include trade secrets, proprietary data, and personal information about clients or employees. Examples include:
+
+*  Customer lists
+*  Product designs
+*  Financial data subject to privacy regulations
+
+Organizations implement strict controls to safeguard Confidential Information, often requiring non-disclosure agreements (NDAs) to ensure that employees and partners do not share this information without permission.
+
+## Restricted 
+Refers to data that has limited access due to its sensitive nature. This category may overlap with Confidential Information, but it specifically implies that access is restricted based on specific criteria, such as security clearance levels or regulatory requirements. Examples include:
+
+*  Classified government documents
+*  Sensitive health information protected under laws like HIPAA
+*  Corporate financial statements prior to public release
+
+Access to Restricted Information is typically controlled through formal processes, ensuring that only authorized individuals can view or handle the information.
+
+##Personally Identifiable Information (PII) 
+Refers to any information that can be used to identify a specific individual. This category of information is crucial in various contexts, including data protection, privacy laws, and cybersecurity.
+
+## Types of PII
+Direct Identifiers; These are pieces of information that can uniquely identify an individual without the need for additional data. Examples include:
+
+*  Full Name
+*  Social Security Number (SSN)
+*  Driver’s License Number
+*  Passport Number
+*  Email Address
+*  Phone Number
+
+Quasi-Identifiers: These are data points that, when combined with other information, can lead to the identification of an individual. Examples include:
+
+*  Date of Birth
+*  Gender
+*  Geographic Location
+*  Race
+
+## Categories of PII
+PII can be categorized into two main types based on sensitivity:
+## Sensitive PII: 
+This includes information that could lead to significant harm if disclosed, such as financial records, medical history, and biometric data.
+## Non-Sensitive PII: 
+This includes information that is generally available from public sources and poses less risk if exposed, such as ZIP codes or gender.
 
 # PCI for Data Privacy and Protection
 The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store, or transmit credit card information maintain a secure environment. This standard was developed to protect cardholder data from theft and fraud, addressing the increasing prevalence of data breaches in the financial sector.
@@ -40,24 +108,25 @@ Sensitive Authentication Data:
 [Data falls under PCI](https://blog.rsisecurity.com/what-data-falls-under-pci-compliance/)
 [What is PCI DSS](https://www.techtarget.com/searchsecurity/definition/PCI-DSS-Payment-Card-Industry-Data-Security-Standard)
 [PCI Security Standards](https://www.pcisecuritystandards.org/standards/)
-[title]( )
-[title]( )
-[title]( )
-[title]( )
-[title]( )
-[title]( )
-[title]( )
-[title]( )
-[title]( )
+[title](https://www.strikegraph.com/blog/pci-dss-policy)
+[title](https://sprinto.com/blog/pci-dss-controls/)
+[title](https://pcicompliancehub.com/the-12-requirements-of-pci-dss-v4-0-explained/)
+[title](https://contractbook.com/dictionary/confidential-information)
+[title](https://docs-prv.pcisecuritystandards.org/Guidance%20Document/PCI%20DSS%20General/PCI-DSS-Scoping-and-Segmentation-Guidance-for-Modern-Network-Architectures.pdf)
+[title](https://www.awarex.com/terms-conditions-confidential-information)
+[title](https://www.techtarget.com/searchsecurity/definition/personally-identifiable-information-PII)
+[title](https://www.investopedia.com/terms/p/personally-identifiable-information-pii.asp)
+[title](https://piwik.pro/blog/what-is-pii-personal-data/)
 [title]( )
 [title]( )
 [title]( )
 [title]( )
 
-https://www.strikegraph.com/blog/pci-dss-policy
-https://sprinto.com/blog/pci-dss-controls/
-https://pcicompliancehub.com/the-12-requirements-of-pci-dss-v4-0-explained/
-**https://docs-prv.pcisecuritystandards.org/Guidance%20Document/PCI%20DSS%20General/PCI-DSS-Scoping-and-Segmentation-Guidance-for-Modern-Network-Architectures.pdf**
+
+
+
+
+
 
 
 
