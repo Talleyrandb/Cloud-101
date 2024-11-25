@@ -47,12 +47,32 @@ Refers to any information that can be used to identify a specific individual. Th
 ## Types of PII
 Direct Identifiers; These are pieces of information that can uniquely identify an individual without the need for additional data. Examples include:
 
-*  Full Name
-*  Social Security Number (SSN)
-*  Driver’s License Number
-*  Passport Number
-*  Email Address
-*  Phone Number
+Identifiers:
+*  Social Security Number (SSN): A unique number assigned to individuals for identification purposes in the U.S.
+*  Driver’s License Number: Used for identification and verification in various contexts.
+*  Passport Number: Essential for international travel and identification.
+
+Biometric Data:
+*  Fingerprints: Unique to each individual and used for security and identification.
+*  Facial Recognition Data: Used in security systems and for identity verification.
+*  Iris Scans: Another form of biometric identification that is highly secure.
+
+Financial Information:
+*  Bank Account Numbers: Critical for accessing financial resources.
+*  Credit Card Numbers: Used for transactions and can lead to financial fraud if compromised.
+
+Medical Records:
+*  Health Insurance Information: Includes details about an individual's health coverage.
+*  Medical Histories: Sensitive information regarding an individual's health conditions and treatments.
+
+Personal Data:
+*  Full Name: Can be used to identify an individual when combined with other data.
+*  Address Information: Includes home addresses, which can be used for identity theft or stalking.
+
+Legal Information:
+*  Criminal Records: Sensitive data that can affect employment and personal reputation.
+*  Court Records: Details about legal proceedings that may be harmful if disclosed without consent.
+
 
 Quasi-Identifiers: These are data points that, when combined with other information, can lead to the identification of an individual. Examples include:
 
@@ -72,10 +92,19 @@ This includes information that is generally available from public sources and po
 The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store, or transmit credit card information maintain a secure environment. This standard was developed to protect cardholder data from theft and fraud, addressing the increasing prevalence of data breaches in the financial sector.
 ## Key Characteristics of PCI DSS
 Scope of Protection: PCI DSS applies to all entities involved in payment card processing, including merchants, service providers, and financial institutions. It encompasses various forms of sensitive data, including:
-- Cardholder names
-- Credit card numbers
-- Expiration dates
-- Security codes (CVV)
+Sensitive Data Types Under PCI DSS
+
+Cardholder Data (CHD):
+*  Primary Account Number (PAN): The unique number identifying the cardholder's account, typically found on the front of the card.
+*  Cardholder Name: The name of the individual to whom the card is issued.
+*  Expiration Date: The date when the card is no longer valid.
+*  Service Code: A three or four-digit code on the magnetic stripe used for transaction authentication.
+
+  Sensitive Authentication Data (SAD):
+*  Full Magnetic Stripe Data: This includes all data stored on the magnetic stripe or chip, which is used during transactions.
+*  Card Verification Codes: Such as CVV, CVC, CID, which are security codes printed on cards.
+*  PINs and PIN Blocks: Personal Identification Numbers used for authenticating transactions.
+
 ## Compliance Requirements: 
 Organizations must adhere to 12 core requirements that are grouped into six goals:
 - 1. Build and maintain a secure network and systems: This includes installing firewalls and not using vendor-supplied default passwords.
