@@ -120,8 +120,6 @@ Health Insurance Portability and Accountability Act (HIPAA). HIPAA specifies 18 
 *  Biometric identifiers (Unique identifiers such as fingerprints or voice prints that can be used to identify individuals)
 *  Full-face photographs and other identifying photos
 *  Any other unique identifying characteristic
-
-
 # References: 
 [Data falls under PCI](https://blog.rsisecurity.com/what-data-falls-under-pci-compliance/)
 [What is PCI DSS](https://www.techtarget.com/searchsecurity/definition/PCI-DSS-Payment-Card-Industry-Data-Security-Standard)
